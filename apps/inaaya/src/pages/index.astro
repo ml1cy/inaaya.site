@@ -1,3 +1,9 @@
+---
+import '../styles/global.css';
+
+const currentYear = new Date().getFullYear();
+---
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,27 +14,32 @@
       content="Inaaya – Photographer & Creative. A personal portfolio showcasing photography and creative work."
     />
     <title>Inaaya – Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
-    <!-- ─── Navigation ─────────────────────────────────────────────────── -->
+
+    <!-- ─── Navigation ─────────────────────────────────────────── -->
     <nav class="nav" id="nav">
       <a href="#hero" class="nav__logo">Inaaya.</a>
-      <button class="nav__burger" id="burger" aria-label="Toggle menu">
+      <button class="nav__burger" id="burger" aria-label="Toggle menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
       <ul class="nav__links" id="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#portfolio">Portfolio</a></li>
         <li><a href="#contact">Contact</a></li>
+        <li>
+          <a href="https://shotby.inaaya.site" target="_blank" rel="noopener noreferrer">
+            Shot By Inaaya ↗
+          </a>
+        </li>
       </ul>
     </nav>
 
-    <!-- ─── Hero ──────────────────────────────────────────────────────── -->
+    <!-- ─── Hero ────────────────────────────────────────────────── -->
     <section class="hero" id="hero">
       <div class="hero__bg">
         <img
@@ -53,7 +64,7 @@
       </a>
     </section>
 
-    <!-- ─── About ─────────────────────────────────────────────────────── -->
+    <!-- ─── About ───────────────────────────────────────────────── -->
     <section class="about section" id="about">
       <div class="container about__grid">
         <div class="about__image-wrap">
@@ -96,13 +107,12 @@
       </div>
     </section>
 
-    <!-- ─── Portfolio ─────────────────────────────────────────────────── -->
+    <!-- ─── Portfolio ────────────────────────────────────────────── -->
     <section class="portfolio section" id="portfolio">
       <div class="container">
         <p class="section__label">My Work</p>
         <h2 class="section__heading">Portfolio</h2>
 
-        <!-- Filter tabs -->
         <div class="portfolio__filters" role="tablist">
           <button class="filter-btn filter-btn--active" data-filter="all" role="tab">All</button>
           <button class="filter-btn" data-filter="portrait" role="tab">Portrait</button>
@@ -110,13 +120,9 @@
           <button class="filter-btn" data-filter="street" role="tab">Street</button>
         </div>
 
-        <!-- Gallery grid -->
         <div class="portfolio__grid" id="gallery">
           <figure class="gallery__item" data-category="portrait">
-            <img
-              src="https://placehold.co/600x750/d4c5b5/777777?text=Photo+01"
-              alt="Portrait placeholder 01"
-            />
+            <img src="https://placehold.co/600x750/d4c5b5/777777?text=Photo+01" alt="Portrait placeholder 01" />
             <figcaption class="gallery__caption">
               <span class="gallery__title">Portrait Study 01</span>
               <span class="gallery__cat">Portrait</span>
@@ -124,10 +130,7 @@
           </figure>
 
           <figure class="gallery__item gallery__item--wide" data-category="landscape">
-            <img
-              src="https://placehold.co/900x600/b5c5d4/777777?text=Photo+02"
-              alt="Landscape placeholder 02"
-            />
+            <img src="https://placehold.co/900x600/b5c5d4/777777?text=Photo+02" alt="Landscape placeholder 02" />
             <figcaption class="gallery__caption">
               <span class="gallery__title">Golden Hour 02</span>
               <span class="gallery__cat">Landscape</span>
@@ -135,10 +138,7 @@
           </figure>
 
           <figure class="gallery__item" data-category="street">
-            <img
-              src="https://placehold.co/600x750/c5d4b5/777777?text=Photo+03"
-              alt="Street placeholder 03"
-            />
+            <img src="https://placehold.co/600x750/c5d4b5/777777?text=Photo+03" alt="Street placeholder 03" />
             <figcaption class="gallery__caption">
               <span class="gallery__title">City Life 03</span>
               <span class="gallery__cat">Street</span>
@@ -146,10 +146,7 @@
           </figure>
 
           <figure class="gallery__item" data-category="portrait">
-            <img
-              src="https://placehold.co/600x750/d4b5c5/777777?text=Photo+04"
-              alt="Portrait placeholder 04"
-            />
+            <img src="https://placehold.co/600x750/d4b5c5/777777?text=Photo+04" alt="Portrait placeholder 04" />
             <figcaption class="gallery__caption">
               <span class="gallery__title">Natural Light 04</span>
               <span class="gallery__cat">Portrait</span>
@@ -157,10 +154,7 @@
           </figure>
 
           <figure class="gallery__item gallery__item--tall" data-category="landscape">
-            <img
-              src="https://placehold.co/600x900/b5d4c5/777777?text=Photo+05"
-              alt="Landscape placeholder 05"
-            />
+            <img src="https://placehold.co/600x900/b5d4c5/777777?text=Photo+05" alt="Landscape placeholder 05" />
             <figcaption class="gallery__caption">
               <span class="gallery__title">Mountain View 05</span>
               <span class="gallery__cat">Landscape</span>
@@ -168,10 +162,7 @@
           </figure>
 
           <figure class="gallery__item" data-category="street">
-            <img
-              src="https://placehold.co/600x750/d4d4b5/777777?text=Photo+06"
-              alt="Street placeholder 06"
-            />
+            <img src="https://placehold.co/600x750/d4d4b5/777777?text=Photo+06" alt="Street placeholder 06" />
             <figcaption class="gallery__caption">
               <span class="gallery__title">Urban Geometry 06</span>
               <span class="gallery__cat">Street</span>
@@ -179,10 +170,7 @@
           </figure>
 
           <figure class="gallery__item gallery__item--wide" data-category="landscape">
-            <img
-              src="https://placehold.co/900x600/c5b5d4/777777?text=Photo+07"
-              alt="Landscape placeholder 07"
-            />
+            <img src="https://placehold.co/900x600/c5b5d4/777777?text=Photo+07" alt="Landscape placeholder 07" />
             <figcaption class="gallery__caption">
               <span class="gallery__title">Seascape 07</span>
               <span class="gallery__cat">Landscape</span>
@@ -190,10 +178,7 @@
           </figure>
 
           <figure class="gallery__item" data-category="portrait">
-            <img
-              src="https://placehold.co/600x750/d4c5c5/777777?text=Photo+08"
-              alt="Portrait placeholder 08"
-            />
+            <img src="https://placehold.co/600x750/d4c5c5/777777?text=Photo+08" alt="Portrait placeholder 08" />
             <figcaption class="gallery__caption">
               <span class="gallery__title">Candid Moment 08</span>
               <span class="gallery__cat">Portrait</span>
@@ -203,7 +188,7 @@
       </div>
     </section>
 
-    <!-- ─── Services ──────────────────────────────────────────────────── -->
+    <!-- ─── Services ────────────────────────────────────────────── -->
     <section class="services section" id="services">
       <div class="container">
         <p class="section__label">What I Offer</p>
@@ -213,14 +198,11 @@
             <div class="service-card__icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                 <circle cx="12" cy="12" r="3"></circle>
-                <path d="M20.188 10.934 C19.703 8.017 17.983 6.297 15.066 5.812 L14.5 3.5 H9.5 L8.934 5.812 C6.017 6.297 4.297 8.017 3.812 10.934 L1.5 11.5 V12.5 L3.812 13.066 C4.297 15.983 6.017 17.703 8.934 18.188 L9.5 20.5 H14.5 L15.066 18.188 C17.983 17.703 19.703 15.983 20.188 13.066 L22.5 12.5 V11.5 Z"></path>
+                <path d="M20.188 10.934C19.703 8.017 17.983 6.297 15.066 5.812L14.5 3.5H9.5L8.934 5.812C6.017 6.297 4.297 8.017 3.812 10.934L1.5 11.5V12.5L3.812 13.066C4.297 15.983 6.017 17.703 8.934 18.188L9.5 20.5H14.5L15.066 18.188C17.983 17.703 19.703 15.983 20.188 13.066L22.5 12.5V11.5Z"></path>
               </svg>
             </div>
             <h3 class="service-card__title">Portrait Photography</h3>
-            <p class="service-card__desc">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore.
-            </p>
+            <p class="service-card__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.</p>
           </div>
           <div class="service-card">
             <div class="service-card__icon">
@@ -230,10 +212,7 @@
               </svg>
             </div>
             <h3 class="service-card__title">Event Coverage</h3>
-            <p class="service-card__desc">
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo.
-            </p>
+            <p class="service-card__desc">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
           </div>
           <div class="service-card">
             <div class="service-card__icon">
@@ -242,25 +221,19 @@
               </svg>
             </div>
             <h3 class="service-card__title">Photo Editing</h3>
-            <p class="service-card__desc">
-              Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum dolore eu fugiat nulla pariatur.
-            </p>
+            <p class="service-card__desc">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ─── Contact ───────────────────────────────────────────────────── -->
+    <!-- ─── Contact ─────────────────────────────────────────────── -->
     <section class="contact section" id="contact">
       <div class="container contact__grid">
         <div class="contact__info">
           <p class="section__label">Let's Talk</p>
           <h2 class="section__heading">Get In Touch</h2>
-          <p>
-            Interested in working together? Fill out the form and I'll get back
-            to you as soon as possible.
-          </p>
+          <p>Interested in working together? Fill out the form and I'll get back to you as soon as possible.</p>
           <ul class="contact__details">
             <li>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
@@ -322,19 +295,109 @@
       </div>
     </section>
 
-    <!-- ─── Footer ────────────────────────────────────────────────────── -->
+    <!-- ─── Footer ──────────────────────────────────────────────── -->
     <footer class="footer">
       <div class="container footer__inner">
         <p class="footer__brand">Inaaya.</p>
-        <p class="footer__copy">&copy; <span id="year"></span> Inaaya. All rights reserved.</p>
+        <p class="footer__copy">&copy; {currentYear} Inaaya. All rights reserved.</p>
         <nav class="footer__nav" aria-label="Footer navigation">
           <a href="#about">About</a>
           <a href="#portfolio">Portfolio</a>
           <a href="#contact">Contact</a>
+          <a href="https://shotby.inaaya.site" target="_blank" rel="noopener noreferrer">Shot By Inaaya</a>
         </nav>
       </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+      /* ─── Nav scroll state ──────────────────────────────────── */
+      const nav = document.getElementById('nav') as HTMLElement;
+      function updateNav() {
+        nav.classList.toggle('scrolled', window.scrollY > 40);
+      }
+      window.addEventListener('scroll', updateNav, { passive: true });
+      updateNav();
+
+      /* ─── Mobile burger ─────────────────────────────────────── */
+      const burger   = document.getElementById('burger') as HTMLButtonElement;
+      const navLinks = document.getElementById('nav-links') as HTMLElement;
+      burger.addEventListener('click', () => {
+        const isOpen = navLinks.classList.toggle('open');
+        burger.classList.toggle('open', isOpen);
+        burger.setAttribute('aria-expanded', String(isOpen));
+        document.body.style.overflow = isOpen ? 'hidden' : '';
+      });
+      navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          navLinks.classList.remove('open');
+          burger.classList.remove('open');
+          burger.setAttribute('aria-expanded', 'false');
+          document.body.style.overflow = '';
+        });
+      });
+
+      /* ─── Scroll reveal ─────────────────────────────────────── */
+      const revealEls = document.querySelectorAll(
+        '.about__grid, .service-card, .gallery__item, .contact__grid, .stat'
+      );
+      revealEls.forEach(el => el.classList.add('reveal'));
+      const revealObserver = new IntersectionObserver(
+        entries => entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            revealObserver.unobserve(entry.target);
+          }
+        }),
+        { threshold: 0.12 }
+      );
+      revealEls.forEach(el => revealObserver.observe(el));
+
+      /* ─── Portfolio filter ──────────────────────────────────── */
+      const filterBtns   = document.querySelectorAll<HTMLButtonElement>('.filter-btn');
+      const galleryItems = document.querySelectorAll<HTMLElement>('.gallery__item');
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterBtns.forEach(b => b.classList.remove('filter-btn--active'));
+          btn.classList.add('filter-btn--active');
+          const filter = btn.dataset.filter;
+          galleryItems.forEach(item => {
+            item.style.display = filter === 'all' || item.dataset.category === filter ? '' : 'none';
+          });
+        });
+      });
+
+      /* ─── Contact form ──────────────────────────────────────── */
+      const form       = document.getElementById('contact-form') as HTMLFormElement | null;
+      const formStatus = document.getElementById('form-status') as HTMLElement | null;
+      if (form && formStatus) {
+        form.addEventListener('submit', e => {
+          e.preventDefault();
+          const name    = (form.elements.namedItem('name')    as HTMLInputElement).value.trim();
+          const email   = form.elements.namedItem('email')    as HTMLInputElement;
+          const message = (form.elements.namedItem('message') as HTMLTextAreaElement).value.trim();
+          if (!name || !email.value.trim() || !message) {
+            formStatus.textContent = 'Please fill in all required fields.';
+            formStatus.className = 'form__status error';
+            return;
+          }
+          if (!email.validity.valid) {
+            formStatus.textContent = 'Please enter a valid email address.';
+            formStatus.className = 'form__status error';
+            return;
+          }
+          const submitBtn = form.querySelector<HTMLButtonElement>('[type="submit"]')!;
+          submitBtn.disabled = true;
+          submitBtn.textContent = 'Sending…';
+          setTimeout(() => {
+            formStatus.textContent = "Thanks! I'll be in touch soon.";
+            formStatus.className = 'form__status success';
+            form.reset();
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Send Message';
+          }, 1200);
+        });
+      }
+    </script>
+
   </body>
 </html>

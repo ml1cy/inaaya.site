@@ -1,0 +1,20 @@
+{
+  "name": "inaaya-monorepo",
+  "private": true,
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "dev:inaaya": "npm run dev --workspace=apps/inaaya",
+    "dev:shotby": "npm run dev --workspace=apps/shotby",
+    "build:inaaya": "npm run build --workspace=apps/inaaya",
+    "build:shotby": "npm run build --workspace=apps/shotby",
+    "build": "npm run build --workspaces",
+    "deploy:inaaya": "npm run deploy --workspace=apps/inaaya",
+    "deploy:shotby": "npm run deploy --workspace=apps/shotby",
+    "deploy": "npm run deploy --workspaces"
+  }
+}
