@@ -77,6 +77,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 .btn--outline:hover { background: var(--clr-white); color: var(--clr-bg); }
 .btn--ghost { border: 2px solid rgba(255,255,255,.3); color: rgba(255,255,255,.8); }
 .btn--ghost:hover { border-color: var(--clr-white); color: var(--clr-white); }
+.btn--full { width: 100%; justify-content: center; }
 
 /* ─── Navigation ────────────────────────────────────────────────── */
 .nav {
@@ -194,7 +195,6 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 .stats-bar .container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  divide: row;
 }
 .stat-item {
   padding: 2rem 1.5rem;

@@ -113,11 +113,11 @@ const currentYear = new Date().getFullYear();
         <p class="section__label">My Work</p>
         <h2 class="section__heading">Portfolio</h2>
 
-        <div class="portfolio__filters" role="tablist">
-          <button class="filter-btn filter-btn--active" data-filter="all" role="tab">All</button>
-          <button class="filter-btn" data-filter="portrait" role="tab">Portrait</button>
-          <button class="filter-btn" data-filter="landscape" role="tab">Landscape</button>
-          <button class="filter-btn" data-filter="street" role="tab">Street</button>
+        <div class="portfolio__filters" role="group" aria-label="Filter portfolio by category">
+          <button class="filter-btn filter-btn--active" data-filter="all" aria-pressed="true">All</button>
+          <button class="filter-btn" data-filter="portrait" aria-pressed="false">Portrait</button>
+          <button class="filter-btn" data-filter="landscape" aria-pressed="false">Landscape</button>
+          <button class="filter-btn" data-filter="street" aria-pressed="false">Street</button>
         </div>
 
         <div class="portfolio__grid" id="gallery">
@@ -309,7 +309,7 @@ const currentYear = new Date().getFullYear();
       </div>
     </footer>
 
-    <script>
+    <script lang="ts">
       /* ─── Nav scroll state ──────────────────────────────────── */
       const nav = document.getElementById('nav') as HTMLElement;
       function updateNav() {
@@ -321,6 +321,14 @@ const currentYear = new Date().getFullYear();
       /* ─── Mobile burger ─────────────────────────────────────── */
       const burger   = document.getElementById('burger') as HTMLButtonElement;
       const navLinks = document.getElementById('nav-links') as HTMLElement;
+
+      function closeMobileMenu() {
+        navLinks.classList.remove('open');
+        burger.classList.remove('open');
+        burger.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      }
+
       burger.addEventListener('click', () => {
         const isOpen = navLinks.classList.toggle('open');
         burger.classList.toggle('open', isOpen);
@@ -328,12 +336,13 @@ const currentYear = new Date().getFullYear();
         document.body.style.overflow = isOpen ? 'hidden' : '';
       });
       navLinks.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-          navLinks.classList.remove('open');
-          burger.classList.remove('open');
-          burger.setAttribute('aria-expanded', 'false');
-          document.body.style.overflow = '';
-        });
+        link.addEventListener('click', closeMobileMenu);
+      });
+
+      // Close menu if viewport crosses the mobile breakpoint while menu is open
+      const desktopMQ = window.matchMedia('(min-width: 901px)');
+      desktopMQ.addEventListener('change', (e) => {
+        if (e.matches) closeMobileMenu();
       });
 
       /* ─── Scroll reveal ─────────────────────────────────────── */
@@ -357,8 +366,12 @@ const currentYear = new Date().getFullYear();
       const galleryItems = document.querySelectorAll<HTMLElement>('.gallery__item');
       filterBtns.forEach(btn => {
         btn.addEventListener('click', () => {
-          filterBtns.forEach(b => b.classList.remove('filter-btn--active'));
+          filterBtns.forEach(b => {
+            b.classList.remove('filter-btn--active');
+            b.setAttribute('aria-pressed', 'false');
+          });
           btn.classList.add('filter-btn--active');
+          btn.setAttribute('aria-pressed', 'true');
           const filter = btn.dataset.filter;
           galleryItems.forEach(item => {
             item.style.display = filter === 'all' || item.dataset.category === filter ? '' : 'none';
