@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Inaaya – Photographer & Creative. A personal portfolio showcasing photography and creative work."
+    />
+    <title>Inaaya – Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- ─── Navigation ─────────────────────────────────────────────────── -->
+    <nav class="nav" id="nav">
+      <a href="#hero" class="nav__logo">Inaaya.</a>
+      <button class="nav__burger" id="burger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- ─── Hero ──────────────────────────────────────────────────────── -->
+    <section class="hero" id="hero">
+      <div class="hero__bg">
+        <img
+          src="https://placehold.co/1600x900/1a1a1a/444444?text=Hero+Photo"
+          alt="Hero background placeholder"
+          class="hero__bg-img"
+        />
+        <div class="hero__overlay"></div>
+      </div>
+      <div class="hero__content">
+        <p class="hero__eyebrow">Photography &amp; Creative</p>
+        <h1 class="hero__title">Inaaya</h1>
+        <p class="hero__subtitle">
+          Capturing moments, telling stories,<br />one frame at a time.
+        </p>
+        <a href="#portfolio" class="btn btn--outline">View My Work</a>
+      </div>
+      <a href="#about" class="hero__scroll" aria-label="Scroll down">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
+      </a>
+    </section>
+
+    <!-- ─── About ─────────────────────────────────────────────────────── -->
+    <section class="about section" id="about">
+      <div class="container about__grid">
+        <div class="about__image-wrap">
+          <img
+            src="https://placehold.co/600x750/e8e0d8/888888?text=Profile+Photo"
+            alt="Portrait of Inaaya – placeholder"
+            class="about__image"
+          />
+        </div>
+        <div class="about__text">
+          <p class="section__label">About Me</p>
+          <h2 class="section__heading">Hello, I'm&nbsp;Inaaya.</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris.
+          </p>
+          <p>
+            Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+            cupidatat non proident, sunt in culpa qui officia deserunt mollit
+            anim id est laborum.
+          </p>
+          <div class="about__stats">
+            <div class="stat">
+              <span class="stat__number">00+</span>
+              <span class="stat__label">Projects</span>
+            </div>
+            <div class="stat">
+              <span class="stat__number">00+</span>
+              <span class="stat__label">Clients</span>
+            </div>
+            <div class="stat">
+              <span class="stat__number">00+</span>
+              <span class="stat__label">Awards</span>
+            </div>
+          </div>
+          <a href="#contact" class="btn btn--primary">Get In Touch</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── Portfolio ─────────────────────────────────────────────────── -->
+    <section class="portfolio section" id="portfolio">
+      <div class="container">
+        <p class="section__label">My Work</p>
+        <h2 class="section__heading">Portfolio</h2>
+
+        <!-- Filter tabs -->
+        <div class="portfolio__filters" role="tablist">
+          <button class="filter-btn filter-btn--active" data-filter="all" role="tab">All</button>
+          <button class="filter-btn" data-filter="portrait" role="tab">Portrait</button>
+          <button class="filter-btn" data-filter="landscape" role="tab">Landscape</button>
+          <button class="filter-btn" data-filter="street" role="tab">Street</button>
+        </div>
+
+        <!-- Gallery grid -->
+        <div class="portfolio__grid" id="gallery">
+          <figure class="gallery__item" data-category="portrait">
+            <img
+              src="https://placehold.co/600x750/d4c5b5/777777?text=Photo+01"
+              alt="Portrait placeholder 01"
+            />
+            <figcaption class="gallery__caption">
+              <span class="gallery__title">Portrait Study 01</span>
+              <span class="gallery__cat">Portrait</span>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery__item gallery__item--wide" data-category="landscape">
+            <img
+              src="https://placehold.co/900x600/b5c5d4/777777?text=Photo+02"
+              alt="Landscape placeholder 02"
+            />
+            <figcaption class="gallery__caption">
+              <span class="gallery__title">Golden Hour 02</span>
+              <span class="gallery__cat">Landscape</span>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery__item" data-category="street">
+            <img
+              src="https://placehold.co/600x750/c5d4b5/777777?text=Photo+03"
+              alt="Street placeholder 03"
+            />
+            <figcaption class="gallery__caption">
+              <span class="gallery__title">City Life 03</span>
+              <span class="gallery__cat">Street</span>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery__item" data-category="portrait">
+            <img
+              src="https://placehold.co/600x750/d4b5c5/777777?text=Photo+04"
+              alt="Portrait placeholder 04"
+            />
+            <figcaption class="gallery__caption">
+              <span class="gallery__title">Natural Light 04</span>
+              <span class="gallery__cat">Portrait</span>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery__item gallery__item--tall" data-category="landscape">
+            <img
+              src="https://placehold.co/600x900/b5d4c5/777777?text=Photo+05"
+              alt="Landscape placeholder 05"
+            />
+            <figcaption class="gallery__caption">
+              <span class="gallery__title">Mountain View 05</span>
+              <span class="gallery__cat">Landscape</span>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery__item" data-category="street">
+            <img
+              src="https://placehold.co/600x750/d4d4b5/777777?text=Photo+06"
+              alt="Street placeholder 06"
+            />
+            <figcaption class="gallery__caption">
+              <span class="gallery__title">Urban Geometry 06</span>
+              <span class="gallery__cat">Street</span>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery__item gallery__item--wide" data-category="landscape">
+            <img
+              src="https://placehold.co/900x600/c5b5d4/777777?text=Photo+07"
+              alt="Landscape placeholder 07"
+            />
+            <figcaption class="gallery__caption">
+              <span class="gallery__title">Seascape 07</span>
+              <span class="gallery__cat">Landscape</span>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery__item" data-category="portrait">
+            <img
+              src="https://placehold.co/600x750/d4c5c5/777777?text=Photo+08"
+              alt="Portrait placeholder 08"
+            />
+            <figcaption class="gallery__caption">
+              <span class="gallery__title">Candid Moment 08</span>
+              <span class="gallery__cat">Portrait</span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── Services ──────────────────────────────────────────────────── -->
+    <section class="services section" id="services">
+      <div class="container">
+        <p class="section__label">What I Offer</p>
+        <h2 class="section__heading">Services</h2>
+        <div class="services__grid">
+          <div class="service-card">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="12" cy="12" r="3"></circle>
+                <path d="M20.188 10.934 C19.703 8.017 17.983 6.297 15.066 5.812 L14.5 3.5 H9.5 L8.934 5.812 C6.017 6.297 4.297 8.017 3.812 10.934 L1.5 11.5 V12.5 L3.812 13.066 C4.297 15.983 6.017 17.703 8.934 18.188 L9.5 20.5 H14.5 L15.066 18.188 C17.983 17.703 19.703 15.983 20.188 13.066 L22.5 12.5 V11.5 Z"></path>
+              </svg>
+            </div>
+            <h3 class="service-card__title">Portrait Photography</h3>
+            <p class="service-card__desc">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+              eiusmod tempor incididunt ut labore.
+            </p>
+          </div>
+          <div class="service-card">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+                <path d="M3 9h18M9 21V9"></path>
+              </svg>
+            </div>
+            <h3 class="service-card__title">Event Coverage</h3>
+            <p class="service-card__desc">
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+              nisi ut aliquip ex ea commodo.
+            </p>
+          </div>
+          <div class="service-card">
+            <div class="service-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+            </div>
+            <h3 class="service-card__title">Photo Editing</h3>
+            <p class="service-card__desc">
+              Duis aute irure dolor in reprehenderit in voluptate velit esse
+              cillum dolore eu fugiat nulla pariatur.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ─── Contact ───────────────────────────────────────────────────── -->
+    <section class="contact section" id="contact">
+      <div class="container contact__grid">
+        <div class="contact__info">
+          <p class="section__label">Let's Talk</p>
+          <h2 class="section__heading">Get In Touch</h2>
+          <p>
+            Interested in working together? Fill out the form and I'll get back
+            to you as soon as possible.
+          </p>
+          <ul class="contact__details">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+              <span>hello@inaaya.site</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <span>Your City, Country</span>
+            </li>
+          </ul>
+          <div class="contact__social">
+            <a href="#" aria-label="Instagram" class="social-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <a href="#" aria-label="Twitter / X" class="social-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+              </svg>
+            </a>
+            <a href="#" aria-label="LinkedIn" class="social-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <form class="contact__form" id="contact-form" novalidate>
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Jane Doe" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="jane@example.com" required />
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Photography inquiry" />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project…" required></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary btn--full">Send Message</button>
+          <p class="form__status" id="form-status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- ─── Footer ────────────────────────────────────────────────────── -->
+    <footer class="footer">
+      <div class="container footer__inner">
+        <p class="footer__brand">Inaaya.</p>
+        <p class="footer__copy">&copy; <span id="year"></span> Inaaya. All rights reserved.</p>
+        <nav class="footer__nav" aria-label="Footer navigation">
+          <a href="#about">About</a>
+          <a href="#portfolio">Portfolio</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
