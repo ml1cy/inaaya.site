@@ -13,8 +13,9 @@
     "build:inaaya": "npm run build --workspace=apps/inaaya",
     "build:shotby": "npm run build --workspace=apps/shotby",
     "build": "npm run build --workspaces",
+    "login:cloudflare": "wrangler login --browser false",
     "deploy:inaaya": "npm run deploy --workspace=apps/inaaya",
     "deploy:shotby": "npm run deploy --workspace=apps/shotby",
-    "deploy": "npm run deploy --workspaces"
+    "deploy": "npm run build --workspaces && npm run deploy --workspaces"
   }
 }

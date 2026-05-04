@@ -41,10 +41,13 @@ npm run build:shotby
 
 Each app has a `wrangler.toml` configured with:
 - `name` — the Worker name
-- `main` — Astro's generated `dist/_worker.js`
+- `main` — Astro's Cloudflare entrypoint `@astrojs/cloudflare/entrypoints/server`
 - `[assets]` — serves the `dist/` directory as static assets
 
 ```bash
+# Log in from a headless terminal/container
+npm run login:cloudflare
+
 # Deploy both sites
 npm run deploy
 
@@ -53,5 +56,5 @@ npm run deploy:inaaya
 npm run deploy:shotby
 ```
 
-> **Note:** You must be logged in with `npx wrangler login` before deploying.
+> **Note:** In this container, use `npx wrangler login --browser false` so Wrangler prints the OAuth URL instead of trying to launch `xdg-open`.
 > DNS for `shotby.inaaya.site` should point to the `shotby-inaaya-site` Worker.
