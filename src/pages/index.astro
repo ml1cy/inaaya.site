@@ -11,11 +11,11 @@ const currentYear = new Date().getFullYear();
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Shot By Inaaya – Sports Photography Portfolio. Dynamic sports photography capturing peak action and defining moments."
+      content="Shot By Inaaya – Sports Photography Portfolio."
     />
-    <title>Shot By Inaaya – Sports Photography</title>
+    <title>Inaaya – Sports Photography</title>
     <link
-      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500&display=swap"
       rel="stylesheet"
     />
   </head>
@@ -23,16 +23,15 @@ const currentYear = new Date().getFullYear();
 
     <!-- ─── Navigation ─────────────────────────────────────────── -->
     <nav class="nav" id="nav">
-      <a href="#hero" class="nav__logo">SHOT BY <span>INAAYA</span></a>
+      <a href="#hero" class="nav__logo">Inaaya.</a>
       <button class="nav__burger" id="burger" aria-label="Toggle menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
       <ul class="nav__links" id="nav-links">
-        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#portfolio">Gallery</a></li>
         <li><a href="#featured">Featured</a></li>
         <li><a href="#about">About</a></li>
-        <li><a href="https://inaaya.site" target="_blank" rel="noopener noreferrer">inaaya.site ↗</a></li>
-        <li><a href="#contact" class="nav__cta">Book a Shoot</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
 
@@ -40,7 +39,7 @@ const currentYear = new Date().getFullYear();
     <section class="hero" id="hero">
       <div class="hero__bg">
         <img
-          src="https://placehold.co/1800x1000/050505/1a1a1a?text=Sports+Hero+Photo"
+          src="https://placehold.co/1800x1000/1a1a1a/444444?text=Sports+Hero+Photo"
           alt="Sports hero photo placeholder"
           class="hero__bg-img"
         />
@@ -48,56 +47,46 @@ const currentYear = new Date().getFullYear();
       </div>
       <div class="hero__content">
         <p class="hero__eyebrow">Sports Photography</p>
-        <h1 class="hero__title">
-          Shot By<br /><em>Inaaya</em>
-        </h1>
+        <h1 class="hero__title">Shot By Inaaya</h1>
         <p class="hero__subtitle">
-          Freezing the decisive moment — peak action, raw emotion,
-          and the stories that define sport.
+          Freezing the decisive moment — peak action, raw emotion,<br />and the stories that define sport.
         </p>
-        <div class="hero__actions">
-          <a href="#gallery" class="btn btn--primary">View Gallery</a>
-          <a href="#contact" class="btn btn--ghost">Book a Shoot</a>
-        </div>
+        <a href="#portfolio" class="btn btn--outline">View Gallery</a>
       </div>
-      <div class="hero__scroll" aria-label="Scroll down">
+      <a href="#portfolio" class="hero__scroll" aria-label="Scroll down">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <line x1="12" y1="5" x2="12" y2="19"></line>
-          <polyline points="19 12 12 19 5 12"></polyline>
+          <polyline points="6 9 12 15 18 9"></polyline>
         </svg>
-        <span>Scroll</span>
+      </a>
+    </section>
+
+    <!-- ─── Stats ───────────────────────────────────────────────── -->
+    <section class="section" style="padding-bottom: 0;">
+      <div class="container">
+          <div class="about__stats" style="justify-content: center; flex-wrap: wrap; text-align: center; gap: clamp(2rem, 5vw, 4rem);">
+            <div class="stat">
+              <span class="stat__number">000+</span>
+              <span class="stat__label">Matches</span>
+            </div>
+            <div class="stat">
+              <span class="stat__number">00+</span>
+              <span class="stat__label">Sports</span>
+            </div>
+            <div class="stat">
+              <span class="stat__number">00+</span>
+              <span class="stat__label">Athletes</span>
+            </div>
+          </div>
       </div>
     </section>
 
-    <!-- ─── Stats bar ────────────────────────────────────────────── -->
-    <div class="stats-bar">
-      <div class="container">
-        <div class="stat-item">
-          <span class="stat-item__number">000+</span>
-          <span class="stat-item__label">Matches Covered</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-item__number">00+</span>
-          <span class="stat-item__label">Sports Covered</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-item__number">00+</span>
-          <span class="stat-item__label">Athletes Featured</span>
-        </div>
-        <div class="stat-item">
-          <span class="stat-item__number">00+</span>
-          <span class="stat-item__label">Publications</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- ─── Gallery ─────────────────────────────────────────────── -->
-    <section class="gallery section" id="gallery">
+    <!-- ─── Portfolio (Gallery) ──────────────────────────────────── -->
+    <section class="portfolio section" id="portfolio">
       <div class="container">
         <p class="section__label">The Work</p>
         <h2 class="section__heading">Gallery</h2>
 
-        <div class="gallery__filters" role="group" aria-label="Filter gallery by sport">
+        <div class="portfolio__filters" role="group" aria-label="Filter gallery by sport">
           <button class="filter-btn filter-btn--active" data-filter="all" aria-pressed="true">All</button>
           <button class="filter-btn" data-filter="football" aria-pressed="false">Football</button>
           <button class="filter-btn" data-filter="basketball" aria-pressed="false">Basketball</button>
@@ -105,142 +94,104 @@ const currentYear = new Date().getFullYear();
           <button class="filter-btn" data-filter="tennis" aria-pressed="false">Tennis</button>
         </div>
 
-        <div class="gallery__grid" id="gallery-grid">
-          <div class="gallery__item gallery__item--featured" data-category="football">
-            <img
-              src="https://placehold.co/900x600/0a0a0a/222222?text=Football+Feature"
-              alt="Football feature placeholder"
-            />
-            <div class="gallery__caption">
+        <div class="portfolio__grid" id="gallery">
+          <figure class="gallery__item" data-category="football">
+            <img src="https://placehold.co/600x750/d4c5b5/777777?text=Football" alt="Football feature placeholder" />
+            <figcaption class="gallery__caption">
               <span class="gallery__title">Match Day Intensity</span>
               <span class="gallery__cat">Football</span>
-            </div>
-          </div>
+            </figcaption>
+          </figure>
 
-          <div class="gallery__item" data-category="basketball">
-            <img
-              src="https://placehold.co/600x520/0f0f0f/282828?text=Basketball+01"
-              alt="Basketball placeholder 01"
-            />
-            <div class="gallery__caption">
+          <figure class="gallery__item gallery__item--wide" data-category="basketball">
+            <img src="https://placehold.co/900x600/b5c5d4/777777?text=Basketball" alt="Basketball placeholder 01" />
+            <figcaption class="gallery__caption">
               <span class="gallery__title">Above the Rim</span>
               <span class="gallery__cat">Basketball</span>
-            </div>
-          </div>
+            </figcaption>
+          </figure>
 
-          <div class="gallery__item" data-category="athletics">
-            <img
-              src="https://placehold.co/600x520/0f0f0f/282828?text=Athletics+01"
-              alt="Athletics placeholder 01"
-            />
-            <div class="gallery__caption">
+          <figure class="gallery__item" data-category="athletics">
+            <img src="https://placehold.co/600x750/c5d4b5/777777?text=Athletics" alt="Athletics placeholder 01" />
+            <figcaption class="gallery__caption">
               <span class="gallery__title">Finish Line</span>
               <span class="gallery__cat">Athletics</span>
-            </div>
-          </div>
+            </figcaption>
+          </figure>
 
-          <div class="gallery__item gallery__item--wide" data-category="football">
-            <img
-              src="https://placehold.co/900x520/0a0a0a/222222?text=Football+02"
-              alt="Football placeholder 02"
-            />
-            <div class="gallery__caption">
+          <figure class="gallery__item" data-category="football">
+            <img src="https://placehold.co/600x750/d4b5c5/777777?text=Football+2" alt="Football placeholder 02" />
+            <figcaption class="gallery__caption">
               <span class="gallery__title">The Tackle</span>
               <span class="gallery__cat">Football</span>
-            </div>
-          </div>
+            </figcaption>
+          </figure>
 
-          <div class="gallery__item gallery__item--tall" data-category="tennis">
-            <img
-              src="https://placehold.co/600x900/0f0f0f/282828?text=Tennis+01"
-              alt="Tennis placeholder 01"
-            />
-            <div class="gallery__caption">
+          <figure class="gallery__item gallery__item--tall" data-category="tennis">
+            <img src="https://placehold.co/600x900/b5d4c5/777777?text=Tennis" alt="Tennis placeholder 01" />
+            <figcaption class="gallery__caption">
               <span class="gallery__title">Ace Moment</span>
               <span class="gallery__cat">Tennis</span>
-            </div>
-          </div>
+            </figcaption>
+          </figure>
 
-          <div class="gallery__item" data-category="basketball">
-            <img
-              src="https://placehold.co/600x520/0f0f0f/282828?text=Basketball+02"
-              alt="Basketball placeholder 02"
-            />
-            <div class="gallery__caption">
+          <figure class="gallery__item" data-category="basketball">
+            <img src="https://placehold.co/600x750/d4d4b5/777777?text=Basketball+2" alt="Basketball placeholder 02" />
+            <figcaption class="gallery__caption">
               <span class="gallery__title">Fast Break</span>
               <span class="gallery__cat">Basketball</span>
-            </div>
-          </div>
+            </figcaption>
+          </figure>
 
-          <div class="gallery__item" data-category="athletics">
-            <img
-              src="https://placehold.co/600x520/0f0f0f/282828?text=Athletics+02"
-              alt="Athletics placeholder 02"
-            />
-            <div class="gallery__caption">
-              <span class="gallery__title">Sprint Start</span>
-              <span class="gallery__cat">Athletics</span>
-            </div>
-          </div>
-
-          <div class="gallery__item gallery__item--wide" data-category="football">
-            <img
-              src="https://placehold.co/900x520/0a0a0a/222222?text=Football+03"
-              alt="Football placeholder 03"
-            />
-            <div class="gallery__caption">
+          <figure class="gallery__item gallery__item--wide" data-category="football">
+            <img src="https://placehold.co/900x600/c5b5d4/777777?text=Football+3" alt="Football placeholder 03" />
+            <figcaption class="gallery__caption">
               <span class="gallery__title">Goal Celebration</span>
               <span class="gallery__cat">Football</span>
-            </div>
-          </div>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery__item" data-category="athletics">
+            <img src="https://placehold.co/600x750/d4c5c5/777777?text=Athletics+2" alt="Athletics placeholder 02" />
+            <figcaption class="gallery__caption">
+              <span class="gallery__title">Sprint Start</span>
+              <span class="gallery__cat">Athletics</span>
+            </figcaption>
+          </figure>
         </div>
       </div>
     </section>
 
-    <!-- ─── Featured Work ────────────────────────────────────────── -->
-    <section class="featured section" id="featured">
+    <!-- ─── Featured ────────────────────────────────────────────── -->
+    <section class="services section" id="featured">
       <div class="container">
         <p class="section__label">Highlights</p>
         <h2 class="section__heading">Featured Projects</h2>
-        <div class="featured__grid">
-          <article class="featured-card">
-            <img
-              src="https://placehold.co/600x900/0a0a0a/222222?text=Project+01"
-              alt="Featured project 01 placeholder"
-              class="featured-card__img"
-            />
-            <div class="featured-card__body">
-              <p class="featured-card__sport">Football</p>
-              <h3 class="featured-card__title">Season Highlights 2024</h3>
-              <p class="featured-card__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <div class="services__grid">
+          <div class="service-card" style="padding: 0; overflow: hidden; text-align: left;">
+            <img src="https://placehold.co/600x400/e8e0d8/888888?text=Project+01" alt="Featured project 01 placeholder" style="width: 100%; aspect-ratio: 3/2; object-fit: cover;" />
+            <div style="padding: 2rem;">
+                <p class="section__label" style="margin-bottom: 0.5rem;">Football</p>
+                <h3 class="service-card__title">Season Highlights 2024</h3>
+                <p class="service-card__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
-          </article>
-
-          <article class="featured-card">
-            <img
-              src="https://placehold.co/600x900/0a0a0a/222222?text=Project+02"
-              alt="Featured project 02 placeholder"
-              class="featured-card__img"
-            />
-            <div class="featured-card__body">
-              <p class="featured-card__sport">Athletics</p>
-              <h3 class="featured-card__title">Regional Championships</h3>
-              <p class="featured-card__desc">Ut enim ad minim veniam, quis nostrud exercitation.</p>
+          </div>
+          <div class="service-card" style="padding: 0; overflow: hidden; text-align: left;">
+            <img src="https://placehold.co/600x400/e8e0d8/888888?text=Project+02" alt="Featured project 02 placeholder" style="width: 100%; aspect-ratio: 3/2; object-fit: cover;" />
+            <div style="padding: 2rem;">
+                <p class="section__label" style="margin-bottom: 0.5rem;">Athletics</p>
+                <h3 class="service-card__title">Regional Championships</h3>
+                <p class="service-card__desc">Ut enim ad minim veniam, quis nostrud exercitation.</p>
             </div>
-          </article>
-
-          <article class="featured-card">
-            <img
-              src="https://placehold.co/600x900/0a0a0a/222222?text=Project+03"
-              alt="Featured project 03 placeholder"
-              class="featured-card__img"
-            />
-            <div class="featured-card__body">
-              <p class="featured-card__sport">Basketball</p>
-              <h3 class="featured-card__title">Court Vision Series</h3>
-              <p class="featured-card__desc">Duis aute irure dolor in reprehenderit in voluptate.</p>
+          </div>
+          <div class="service-card" style="padding: 0; overflow: hidden; text-align: left;">
+            <img src="https://placehold.co/600x400/e8e0d8/888888?text=Project+03" alt="Featured project 03 placeholder" style="width: 100%; aspect-ratio: 3/2; object-fit: cover;" />
+            <div style="padding: 2rem;">
+                <p class="section__label" style="margin-bottom: 0.5rem;">Basketball</p>
+                <h3 class="service-card__title">Court Vision Series</h3>
+                <p class="service-card__desc">Duis aute irure dolor in reprehenderit in voluptate.</p>
             </div>
-          </article>
+          </div>
         </div>
       </div>
     </section>
@@ -250,8 +201,8 @@ const currentYear = new Date().getFullYear();
       <div class="container about__grid">
         <div class="about__image-wrap">
           <img
-            src="https://placehold.co/600x750/141414/333333?text=Photographer+Photo"
-            alt="Inaaya – photographer portrait placeholder"
+            src="https://placehold.co/600x750/e8e0d8/888888?text=Profile+Photo"
+            alt="Portrait of Inaaya – placeholder"
             class="about__image"
           />
         </div>
@@ -268,15 +219,9 @@ const currentYear = new Date().getFullYear();
             dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
             proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
           </p>
-          <div class="about__skills">
-            <span class="skill-tag">Sports Photography</span>
-            <span class="skill-tag">Action Shots</span>
-            <span class="skill-tag">Event Coverage</span>
-            <span class="skill-tag">Photo Editing</span>
-            <span class="skill-tag">Drone Photography</span>
-            <span class="skill-tag">Post-Production</span>
+          <div style="margin-top: 2rem;">
+              <a href="#contact" class="btn btn--primary">Book a Session</a>
           </div>
-          <a href="#contact" class="btn btn--primary">Book a Session</a>
         </div>
       </div>
     </section>
@@ -287,10 +232,7 @@ const currentYear = new Date().getFullYear();
         <div class="contact__info">
           <p class="section__label">Work With Me</p>
           <h2 class="section__heading">Book a Shoot</h2>
-          <p>
-            Looking for a sports photographer for your next event, club, or
-            publication? Let's make it happen.
-          </p>
+          <p>Looking for a sports photographer for your next event, club, or publication? Let's make it happen.</p>
           <ul class="contact__details">
             <li>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
@@ -320,6 +262,13 @@ const currentYear = new Date().getFullYear();
                 <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
               </svg>
             </a>
+            <a href="#" aria-label="LinkedIn" class="social-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+            </a>
           </div>
         </div>
         <form class="contact__form" id="contact-form" novalidate>
@@ -333,7 +282,7 @@ const currentYear = new Date().getFullYear();
           </div>
           <div class="form-group">
             <label for="sport">Sport / Event Type</label>
-            <select id="sport" name="sport">
+            <select id="sport" name="sport" class="form-select">
               <option value="">Select a sport…</option>
               <option value="football">Football</option>
               <option value="basketball">Basketball</option>
@@ -355,14 +304,13 @@ const currentYear = new Date().getFullYear();
     <!-- ─── Footer ──────────────────────────────────────────────── -->
     <footer class="footer">
       <div class="container footer__inner">
-        <p class="footer__brand">SHOT BY <span>INAAYA</span></p>
+        <p class="footer__brand">Inaaya.</p>
         <p class="footer__copy">&copy; {currentYear} Inaaya. All rights reserved.</p>
         <nav class="footer__nav" aria-label="Footer navigation">
-          <a href="#gallery">Gallery</a>
+          <a href="#portfolio">Gallery</a>
           <a href="#featured">Featured</a>
           <a href="#about">About</a>
           <a href="#contact">Contact</a>
-          <a href="https://inaaya.site" target="_blank" rel="noopener noreferrer">Personal Site</a>
         </nav>
       </div>
     </footer>
@@ -370,10 +318,11 @@ const currentYear = new Date().getFullYear();
     <script lang="ts">
       /* ─── Nav scroll state ──────────────────────────────────── */
       const nav = document.getElementById('nav') as HTMLElement;
-      window.addEventListener('scroll', () => {
+      function updateNav() {
         nav.classList.toggle('scrolled', window.scrollY > 40);
-      }, { passive: true });
-      nav.classList.toggle('scrolled', window.scrollY > 40);
+      }
+      window.addEventListener('scroll', updateNav, { passive: true });
+      updateNav();
 
       /* ─── Mobile burger ─────────────────────────────────────── */
       const burger   = document.getElementById('burger') as HTMLButtonElement;
@@ -396,29 +345,28 @@ const currentYear = new Date().getFullYear();
         link.addEventListener('click', closeMobileMenu);
       });
 
-      // Close menu if viewport crosses the mobile breakpoint while menu is open
-      const desktopMQ = window.matchMedia('(min-width: 961px)');
+      const desktopMQ = window.matchMedia('(min-width: 901px)');
       desktopMQ.addEventListener('change', (e) => {
         if (e.matches) closeMobileMenu();
       });
 
       /* ─── Scroll reveal ─────────────────────────────────────── */
       const revealEls = document.querySelectorAll(
-        '.stat-item, .gallery__item, .featured-card, .about__grid, .contact__grid'
+        '.about__grid, .service-card, .gallery__item, .contact__grid, .stat'
       );
       revealEls.forEach(el => el.classList.add('reveal'));
-      const io = new IntersectionObserver(
+      const revealObserver = new IntersectionObserver(
         entries => entries.forEach(entry => {
           if (entry.isIntersecting) {
             entry.target.classList.add('visible');
-            io.unobserve(entry.target);
+            revealObserver.unobserve(entry.target);
           }
         }),
-        { threshold: 0.1 }
+        { threshold: 0.12 }
       );
-      revealEls.forEach(el => io.observe(el));
+      revealEls.forEach(el => revealObserver.observe(el));
 
-      /* ─── Gallery filter ────────────────────────────────────── */
+      /* ─── Portfolio filter ──────────────────────────────────── */
       const filterBtns   = document.querySelectorAll<HTMLButtonElement>('.filter-btn');
       const galleryItems = document.querySelectorAll<HTMLElement>('.gallery__item');
       filterBtns.forEach(btn => {
@@ -443,14 +391,14 @@ const currentYear = new Date().getFullYear();
         form.addEventListener('submit', e => {
           e.preventDefault();
           const name    = (form.elements.namedItem('name')    as HTMLInputElement).value.trim();
-          const emailEl = form.elements.namedItem('email')    as HTMLInputElement;
+          const email   = form.elements.namedItem('email')    as HTMLInputElement;
           const message = (form.elements.namedItem('message') as HTMLTextAreaElement).value.trim();
-          if (!name || !emailEl.value.trim() || !message) {
+          if (!name || !email.value.trim() || !message) {
             formStatus.textContent = 'Please fill in all required fields.';
             formStatus.className = 'form__status error';
             return;
           }
-          if (!emailEl.validity.valid) {
+          if (!email.validity.valid) {
             formStatus.textContent = 'Please enter a valid email address.';
             formStatus.className = 'form__status error';
             return;
@@ -459,7 +407,7 @@ const currentYear = new Date().getFullYear();
           submitBtn.disabled = true;
           submitBtn.textContent = 'Sending…';
           setTimeout(() => {
-            formStatus.textContent = "Thanks! I'll be in touch shortly.";
+            formStatus.textContent = "Thanks! I'll be in touch soon.";
             formStatus.className = 'form__status success';
             form.reset();
             submitBtn.disabled = false;

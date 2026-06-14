@@ -308,12 +308,12 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 }
 .form-group { display: flex; flex-direction: column; gap: .4rem; }
 .form-group label { font-size: .82rem; font-weight: 500; letter-spacing: .05em; }
-.form-group input, .form-group textarea {
+.form-group input, .form-group textarea, .form-group select {
   padding: .75rem 1rem; border: 1.5px solid #ddd; border-radius: var(--radius-sm);
   font: inherit; font-size: .9rem; background: var(--clr-bg);
   transition: border-color var(--transition), box-shadow var(--transition); resize: vertical;
 }
-.form-group input:focus, .form-group textarea:focus {
+.form-group input:focus, .form-group textarea:focus, .form-group select:focus {
   outline: none; border-color: var(--clr-accent);
   box-shadow: 0 0 0 3px rgba(181,137,90,.15);
 }

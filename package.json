@@ -1,21 +1,18 @@
 {
-  "name": "inaaya-monorepo",
-  "private": true,
-  "engines": {
-    "node": ">=22.0.0"
-  },
-  "workspaces": [
-    "apps/*"
-  ],
+  "name": "inaaya-site",
+  "type": "module",
+  "version": "0.1.0",
   "scripts": {
-    "dev:inaaya": "npm run dev --workspace=apps/inaaya",
-    "dev:shotby": "npm run dev --workspace=apps/shotby",
-    "build:inaaya": "npm run build --workspace=apps/inaaya",
-    "build:shotby": "npm run build --workspace=apps/shotby",
-    "build": "npm run build --workspaces",
-    "login:cloudflare": "wrangler login --browser false",
-    "deploy:inaaya": "npm run deploy --workspace=apps/inaaya",
-    "deploy:shotby": "npm run deploy --workspace=apps/shotby",
-    "deploy": "npm run build --workspaces && npm run deploy --workspaces"
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "deploy": "wrangler deploy"
+  },
+  "dependencies": {
+    "astro": "^6.2.1",
+    "@astrojs/cloudflare": "^13.3.0"
+  },
+  "devDependencies": {
+    "wrangler": "^4.87.0"
   }
 }
